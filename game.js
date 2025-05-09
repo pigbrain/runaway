@@ -116,7 +116,7 @@ function createDog() {
         x: x,
         y: y,
         size: 10,
-        speed: 4.5
+        speed: 4.2
     };
 }
 
@@ -191,7 +191,7 @@ function update() {
 
     // 시간에 따라 강아지 추가 (3초마다)
     elapsedTime = Math.floor((Date.now() - startTime) / 1000);
-    if (elapsedTime % 3 === 0 && elapsedTime !== 0) {
+    if (elapsedTime % 2 === 0 && elapsedTime !== 0) {
         if (dogs.length < Math.floor(elapsedTime / 2) + 1) {
             dogs.push(createDog());
         }
